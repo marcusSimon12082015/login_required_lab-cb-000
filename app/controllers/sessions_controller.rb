@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    binding.pry
+    byebug
     if current_user.nil? || params[:name].empty
       redirect_to new_session_path
     else
