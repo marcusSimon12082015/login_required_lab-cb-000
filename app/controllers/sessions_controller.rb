@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    byebug
     if params[:name].nil?
       redirect_to new_session_path
     elsif params[:name].empty?
