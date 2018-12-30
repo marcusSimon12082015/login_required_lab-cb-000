@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'secrets/show'
 
 #  post 'sessions/create'
-#  post 'sessions/destroy'
+   post 'sessions/destroy'
 
   resources :sessions
 
