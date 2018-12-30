@@ -4,9 +4,11 @@ class SessionsController < ApplicationController
 
   def create
     byebug
-    if current_user.nil? || params[:name].empty
+    if params[:name].nil?
       redirect_to new_session_path
-    else
+    elsif params[:name].empty?
+      redirect_to new_session_path
+    else  
       session[:name] = params[:name]
     end
   end
