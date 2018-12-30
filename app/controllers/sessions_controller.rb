@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_to new_session_path
     elsif params[:name].empty?
       redirect_to new_session_path
-    else  
+    else
       session[:name] = params[:name]
     end
   end
